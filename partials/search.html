@@ -1,0 +1,19 @@
+<div class="container" ng-controller="searchController">
+  <div class="jumbotron">
+    <h1 class="page-header">Angular OMDb API Search</h1>
+    <br>
+    <h3>Enter a movie by title.</h3>
+    <input type="text" ng-model="title"></p>
+    <button ng-click="search(title)">Submit</button>
+  </div>
+  <h3 ng-show="results.length">Results:</h3>
+  <br>
+  <!-- code to render if there are search results-->
+  <div ng-repeat="result in results">
+    <h4><a href="/#/show/{{result.imdbID}}">{{result.Title + ' (' + result.Year + ')'}}</a></h4>
+  </div>
+  <!-- code to render if there no search results-->
+  <div ng-show="error">
+    <h3>No results!</h3>
+  </div>
+</div><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">

@@ -1,15 +1,12 @@
-/*app.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'templates/main.html'
+      templateUrl: 'partials/search.html',
+      controller: 'searchController'
     })
-    .when('/denver', {
-      templateUrl: 'templates/denver.html',
-      controller: 'weatherController'
-    })
-    .when('/boulder', {
-      templateUrl: 'templates/boulder.html',
-      controller: 'weatherController'
+    .when('/show/:id', {
+      templateUrl: 'partials/show.html',
+      controller: 'showController'
     })
     .otherwise('/');
-});*/
+});
